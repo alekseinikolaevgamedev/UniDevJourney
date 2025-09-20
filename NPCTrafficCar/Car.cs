@@ -188,9 +188,9 @@ namespace Game.NPC.Traffic.Cars
         private void OnDrawGizmos()
         {
             // Устанавливаем цвет гизмос в зависимости от состояния
-            Gizmos.color = isCarInFront ? Color.green : Color.red;
+            Gizmos.color = isCarInFront ? Color.red : Color.green;
             // Рисуем линию впереди машины
-            Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10f);
+            Gizmos.DrawLine(transform.position, transform.position + transform.forward * detectionDistance);
         }
     }
 }
